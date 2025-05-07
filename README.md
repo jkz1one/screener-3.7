@@ -46,7 +46,8 @@ A real-time stock scanning tool that builds a tiered watchlist using volume, pri
 
 ### Known Issues
 * - Enrich runs multiple times during post_open_signals because it is saving every so many tickers. The updated post open signals.json causes enrich universe to run. This is causing the universe file to have multiple tags/reasons under Tier Hits.
-* - Enrich isn't calculating sector 
+* - Enrich isn't calculating sector
+* - Gap Up and Gap Down isnt exclusive
 
 ### Completed
 
@@ -72,7 +73,7 @@ A real-time stock scanning tool that builds a tiered watchlist using volume, pri
 ### Next Steps
 
 * [ ] Implement 4:00 AM daily reset via `cache_manager.py`
-    (smart reset incase pipeline is ran after 4A M)
+    (smart reset incase pipeline is ran after 4AM)
 * [ ] Automatically run `screenbuilder.py` and `watchlist_builder.py` after enrichment
 * [ ] Consider adding manual run commands while scheduler active
 * [ ] Add Admin Panel to trigger backend jobs manually
